@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Aluno as Aluno } from './alunos/aluno';
+import { Aluno } from './alunos/aluno';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
