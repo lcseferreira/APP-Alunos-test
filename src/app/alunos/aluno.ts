@@ -10,6 +10,8 @@ export class Aluno {
   cpfMae!: string;
   nomePai!: string;
   cpfPai!: string;
+  nomeResponsavel!: string;
+  cpfResponsavel!: string;
   nomeEscola!: string;
   nomeProfessor!: string;
   serieEscolar!: string;
@@ -22,6 +24,8 @@ export class Aluno {
   contatoPai1!: string;
   contatoMae2!: string;
   contatoPai2!: string;
+  contatoResponsavel1!: string;
+  contatoResponsavel2!: string;
   logradouro!: string;
   numero!: string;
   bairro!: string;

@@ -149,7 +149,9 @@
         </div>
       </div>
 
-      <div class="col-md-12"><h3 class="mt-2">Dados dos Pais</h3></div>
+      <div class="col-md-12">
+        <h3 class="mt-2">Dados dos Pais ou Responsáveis</h3>
+      </div>
 
       <div class="col-md-6">
         <div class="form-group">
@@ -243,6 +245,54 @@
             class="form-control"
             [(ngModel)]="aluno.contatoPai2"
             name="contatoPai2"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Nome do(a) Responsável:</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="aluno.nomeResponsavel"
+            name="nomeResponsavel"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>CPF do(a) Responsável:</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="aluno.cpfResponsavel"
+            name="cpfResponsavel"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Contato do(a) Responsável:</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="aluno.contatoResponsavel1"
+            name="contatoResponsavel1"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Outro contato:</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="aluno.contatoResponsavel2"
+            name="contatoResponsavel2"
           />
         </div>
       </div>
