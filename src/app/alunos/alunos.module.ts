@@ -11,4 +11,4 @@ import { alunosListaComponent } from './alunos-lista/alunos-lista.component';
   imports: [CommonModule, alunosRoutingModule, FormsModule],
   exports: [alunosFormComponent, alunosListaComponent],
 })
-export class alunosModule {}
+export class AlunosModule {}

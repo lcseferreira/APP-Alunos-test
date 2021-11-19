@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component';
-import { alunosModule } from './alunos/alunos.module';
+import { AlunosModule } from './alunos/alunos.module';
 import { AlunosService } from './alunos.service';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -22,7 +22,7 @@ import { TokenInterceptor } from './token.interceptor';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    alunosModule,
+    AlunosModule,
     FormsModule,
   ],
   providers: [
