@@ -104,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "alunos-app"
+  "cli": {
+    "analytics": "d3329524-d62b-4a29-959f-37da8152299d"
+  }
 }
