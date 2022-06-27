@@ -1,3 +1,5 @@
+import { Usuario } from './../../login/usuario';
+import { AuthService } from 'src/app/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
@@ -12,12 +14,14 @@ import { Observable } from 'rxjs';
 })
 export class alunosFormComponent implements OnInit {
   aluno: Aluno;
+  usuario!: string;
   success: boolean = false;
   errors!: String[];
   id!: number;
 
   constructor(
     private service: AlunosService,
+    private usuarioService: AuthService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {
@@ -25,6 +29,8 @@ export class alunosFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.usuario = this.usuarioService.getUsuarioAutenticado();
+
     let params: Observable<Params> = this.activatedRoute.params;
 
     params.subscribe((urlParams) => {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 import { Usuario } from './usuario';
 
 @Component({
@@ -11,6 +11,7 @@ import { Usuario } from './usuario';
 export class LoginComponent {
   username!: string;
   password!: string;
+  role!: string;
   loginError!: boolean;
   errors!: String[];
 
@@ -35,6 +36,7 @@ export class LoginComponent {
     const usuario: Usuario = new Usuario();
     usuario.username = this.username;
     usuario.password = this.password;
+    usuario.role = this.role;
 
     this.authService.salvar(usuario).subscribe(
       (response) => {

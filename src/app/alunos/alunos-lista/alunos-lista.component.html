@@ -14,10 +14,19 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-6" *ngIf="usuario === 'admin'">
       <button class="btn btn-warning" (click)="novoCadastro()">
         <i class="fa fa-plus"></i> Novo
       </button>
+    </div>
+    <div class="col-md-6 search-container">
+      <form>
+        <input
+          type="text"
+          placeholder="Busque pelo nome"
+          (input)="search($event)"
+        />
+      </form>
     </div>
   </div>
   <br />
@@ -52,6 +61,7 @@
                 (click)="preparaDelete(aluno)"
                 data-toggle="modal"
                 data-target="#modalDelete"
+                *ngIf="usuario === 'admin'"
               >
                 <i class="fa fa-trash"></i>
               </button>

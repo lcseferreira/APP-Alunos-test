@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlunosService } from 'src/app/alunos.service';
 import { Aluno } from '../aluno';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-alunos-lista',
@@ -13,11 +14,29 @@ export class alunosListaComponent implements OnInit {
   alunoSelecionado!: Aluno;
   mensagemSucesso!: string;
   mensagemErro!: string;
+  usuario!: string;
 
-  constructor(private service: AlunosService, private router: Router) {}
+  constructor(
+    private service: AlunosService,
+    private router: Router,
+    private usuarioService: AuthService
+  ) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe((response) => (this.alunos = response));
+    this.usuario = this.usuarioService.getUsuarioAutenticado();
+
+    this.service
+      .listar()
+      .subscribe((response: Aluno[]) => (this.alunos = response));
+  }
+
+  search(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+
+    this.alunos = this.alunos.filter((aluno) => {
+      return aluno.nome.toLowerCase().includes(value);
+    });
   }
 
   novoCadastro() {

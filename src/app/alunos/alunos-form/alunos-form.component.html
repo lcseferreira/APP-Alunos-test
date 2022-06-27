@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="usuario === 'admin'">
         <div class="form-group">
           <label>CPF:</label>
           <input
@@ -171,7 +171,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="usuario === 'admin'">
         <div class="form-group">
           <label>CPF da Mãe:</label>
           <input
@@ -223,7 +223,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="usuario === 'admin'">
         <div class="form-group">
           <label>CPF do Pai:</label>
           <input
@@ -275,7 +275,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" *ngIf="usuario === 'admin'">
         <div class="form-group">
           <label>CPF do(a) Responsável:</label>
           <input
@@ -517,62 +517,72 @@
         </div>
       </div>
 
-      <div class="col-md-12"><h3 class="mt-2">Relatórios</h3></div>
-
       <div class="col-md-12">
-        <div class="form-group">
-          <span class="input-group-text">Resumo do aluno</span>
-          <textarea
-            class="form-control"
-            [(ngModel)]="aluno.resumoAluno"
-            name="resumoAluno"
-          ></textarea>
+        <h3 class="mt-2">Relatórios</h3>
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <span class="input-group-text">Resumo do aluno</span>
+            <textarea
+              class="form-control"
+              [(ngModel)]="aluno.resumoAluno"
+              name="resumoAluno"
+            ></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-12">
-        <div class="form-group">
-          <span class="input-group-text">Outras informações</span>
-          <textarea
-            class="form-control"
-            [(ngModel)]="aluno.outrasInfos"
-            name="outrasInfos"
-          ></textarea>
+        <div class="col-md-12">
+          <div class="form-group">
+            <span class="input-group-text">Outras informações</span>
+            <textarea
+              class="form-control"
+              [(ngModel)]="aluno.outrasInfos"
+              name="outrasInfos"
+            ></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-12">
-        <div class="form-group">
-          <span class="input-group-text">Relatório médico</span>
-          <textarea
-            class="form-control"
-            [(ngModel)]="aluno.relatorioMedico"
-            name="relatorioMedico"
-          ></textarea>
+        <div class="col-md-12">
+          <div class="form-group">
+            <span class="input-group-text">Relatório médico</span>
+            <textarea
+              class="form-control"
+              [(ngModel)]="aluno.relatorioMedico"
+              name="relatorioMedico"
+            ></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-12">
-        <div class="form-group">
-          <span class="input-group-text">Relatório pedagógico</span>
-          <textarea
-            class="form-control"
-            [(ngModel)]="aluno.relatorioPedagogico"
-            name="relatorioPedagogico"
-          ></textarea>
+        <div class="col-md-12">
+          <div class="form-group">
+            <span class="input-group-text">Relatório pedagógico</span>
+            <textarea
+              class="form-control"
+              [(ngModel)]="aluno.relatorioPedagogico"
+              name="relatorioPedagogico"
+            ></textarea>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-2">
-        <button type="submit" class="btn btn-success" *ngIf="!aluno.id">
+        <button
+          type="submit"
+          class="btn btn-success"
+          *ngIf="!aluno.id && usuario === 'admin'"
+        >
           <i class="fa fa-save"></i> Salvar
         </button>
       </div>
 
       <div class="col-md-2">
-        <button type="submit" class="btn btn-primary" *ngIf="aluno.id">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          *ngIf="aluno.id && usuario === 'admin'"
+        >
           <i class="fa fa-sync-alt"></i> Atualizar
         </button>
       </div>

@@ -65,4 +65,13 @@ export class AuthService {
     };
     return this.http.post(this.urlToken, params.toString(), { headers });
   }
+
+  getUsuarioAutenticadoRole() {
+    const token = this.getToken();
+    if (token) {
+      const usuario = this.jwtHelper.decodeToken(token).role;
+      return usuario;
+    }
+    return null;
+  }
 }
