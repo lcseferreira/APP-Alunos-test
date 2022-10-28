@@ -164,7 +164,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomeMae"
+            [(ngModel)]="aluno.responsavel.nome"
             name="nomeMae"
             placeholder="Nome da Mãe"
           />
@@ -177,7 +177,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cpfMae"
+            [(ngModel)]="aluno.responsavel.cpf"
             name="cpfMae"
             placeholder="CPF válido, somente números"
           />
@@ -190,7 +190,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoMae1"
+            [(ngModel)]="aluno.responsavel.contato1"
             name="contatoMae1"
             placeholder="(16) 99999-9999"
           />
@@ -203,7 +203,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoMae2"
+            [(ngModel)]="aluno.responsavel.contato2"
             name="contatoMae2"
             placeholder="(16) 99999-9999 - Tia"
           />
@@ -216,7 +216,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomePai"
+            [(ngModel)]="aluno.responsavel.nome"
             name="nomePai"
             placeholder="Nome do Pai"
           />
@@ -229,7 +229,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cpfPai"
+            [(ngModel)]="aluno.responsavel.cpf"
             name="cpfPai"
             placeholder="CPF válido, somente números"
           />
@@ -242,7 +242,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoPai1"
+            [(ngModel)]="aluno.responsavel.contato1"
             name="contatoPai1"
             placeholder="(16) 99999-9999"
           />
@@ -255,7 +255,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoPai2"
+            [(ngModel)]="aluno.responsavel.contato2"
             name="contatoPai2"
             placeholder="(16) 99999-9999"
           />
@@ -268,7 +268,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomeResponsavel"
+            [(ngModel)]="aluno.responsavel.nome"
             name="nomeResponsavel"
             placeholder="Nome Responsável Legal"
           />
@@ -281,7 +281,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cpfResponsavel"
+            [(ngModel)]="aluno.responsavel.cpf"
             name="cpfResponsavel"
             placeholder="CPF válido, somente números"
           />
@@ -294,7 +294,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoResponsavel1"
+            [(ngModel)]="aluno.responsavel.contato1"
             name="contatoResponsavel1"
             placeholder="(16) 99999-9999"
           />
@@ -307,7 +307,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.contatoResponsavel2"
+            [(ngModel)]="aluno.responsavel.contato2"
             name="contatoResponsavel2"
             placeholder="(16) 99999-9999"
           />
@@ -322,7 +322,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomeEscola"
+            [(ngModel)]="aluno.escola.nome"
             name="nomeEscola"
             placeholder="Ex: E. M. Prof. Manoel L. Matos Negraes"
           />
@@ -335,7 +335,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.serieEscolar"
+            [(ngModel)]="aluno.escola.serieEscolar"
             name="serieEscolar"
             placeholder="ex: 1º Ano"
           />
@@ -348,7 +348,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomeProfessor"
+            [(ngModel)]="aluno.escola.professor"
             name="nomeProfessor"
             placeholder="Nome Professor da Sala"
           />
@@ -361,7 +361,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.nomeProfessorEspecial"
+            [(ngModel)]="aluno.escola.professorEspecial"
             name="nomeProfessorEspecial"
             placeholder="Nome Professor Educação Especial"
           />
@@ -378,7 +378,7 @@
               name="inlineRadioOptionsPeriodo"
               id="inlineRadio1"
               value="Manhã"
-              [(ngModel)]="aluno.periodoEscolar"
+              [(ngModel)]="aluno.escola.periodoEscolar"
             />
             <label class="form-check-label" for="inlineRadio1">Manhã</label>
           </div>
@@ -389,7 +389,7 @@
               name="inlineRadioOptionsPeriodo"
               id="inlineRadio2"
               value="Tarde"
-              [(ngModel)]="aluno.periodoEscolar"
+              [(ngModel)]="aluno.escola.periodoEscolar"
             />
             <label class="form-check-label" for="inlineRadio2">Tarde</label>
           </div>
@@ -430,7 +430,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cuidador"
+            [(ngModel)]="aluno.escola.cuidador"
             name="cuidador"
             placeholder="Nome do Cuidador"
           />
@@ -445,7 +445,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.logradouro"
+            [(ngModel)]="aluno.endereco.logradouro"
             name="logradouro"
             placeholder="Nome da Rua"
           />
@@ -458,7 +458,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.numero"
+            [(ngModel)]="aluno.endereco.numero"
             name="numero"
             placeholder="Número"
           />
@@ -471,7 +471,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.bairro"
+            [(ngModel)]="aluno.endereco.bairro"
             name="bairro"
             placeholder="Nome do Bairro"
           />
@@ -484,7 +484,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cidade"
+            [(ngModel)]="aluno.endereco.cidade"
             name="cidade"
             placeholder="Cidade"
           />
@@ -497,7 +497,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.estado"
+            [(ngModel)]="aluno.endereco.estado"
             name="estado"
             placeholder="SP"
           />
@@ -510,7 +510,7 @@
           <input
             type="text"
             class="form-control"
-            [(ngModel)]="aluno.cep"
+            [(ngModel)]="aluno.endereco.cep"
             name="cep"
             placeholder="13580-000"
           />
@@ -525,7 +525,7 @@
             <span class="input-group-text">Resumo do aluno</span>
             <textarea
               class="form-control"
-              [(ngModel)]="aluno.resumoAluno"
+              [(ngModel)]="aluno.relatorio.resumoAluno"
               name="resumoAluno"
             ></textarea>
           </div>
@@ -536,7 +536,7 @@
             <span class="input-group-text">Outras informações</span>
             <textarea
               class="form-control"
-              [(ngModel)]="aluno.outrasInfos"
+              [(ngModel)]="aluno.relatorio.outrasInfos"
               name="outrasInfos"
             ></textarea>
           </div>
@@ -547,7 +547,7 @@
             <span class="input-group-text">Relatório médico</span>
             <textarea
               class="form-control"
-              [(ngModel)]="aluno.relatorioMedico"
+              [(ngModel)]="aluno.relatorio.relatorioMedico"
               name="relatorioMedico"
             ></textarea>
           </div>
@@ -558,7 +558,7 @@
             <span class="input-group-text">Relatório pedagógico</span>
             <textarea
               class="form-control"
-              [(ngModel)]="aluno.relatorioPedagogico"
+              [(ngModel)]="aluno.relatorio.relatorioPedagogico"
               name="relatorioPedagogico"
             ></textarea>
           </div>
