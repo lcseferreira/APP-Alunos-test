@@ -1,5 +1,10 @@
-.altera-fontes{
+.altera-fontes {
   font-style: normal;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: hsl(229, 84%, 30%);
+}
+
+.bg-img {
+  background-image: url(../../assets/bg-tudoazul2.jpg);
+  background-size: cover;
 }
